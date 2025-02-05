@@ -59,9 +59,12 @@ spinBtn.addEventListener("click", () => {
     animateButton();
 
     // rotace barev ve čtvercích
-    firstColor.style.transform = rotate();
-    secondColor.style.transform = rotate();
-    thirdColor.style.transform = rotate();
+    let boxColor = (oneColor) => {
+      oneColor.style.transform = rotate();
+    };
+    boxColor(firstColor);
+    boxColor(secondColor);
+    boxColor(thirdColor);
 
     // funkce pro generování barev
     const getRandomColor = () => {
