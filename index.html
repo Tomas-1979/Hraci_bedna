@@ -12,12 +12,12 @@
   <!-- hra -->
 
   <body
-    class="min-h-screen max-w-3xl mx-auto flex flex-col justify-center align-center bg-slate-900 text-[#66ff66] select-none font-mono"
+    class="min-h-screen max-w-3xl mx-auto flex flex-col justify-center align-center bg-slate-900 text-[#66ff66] select-none font-mono overflow-x-hidden"
   >
     <!-- název hry -->
     <header>
       <h1
-        class="text-center uppercase text-6xl tracking-[.2em] font-black py-4 bg-gradient-to-b from-[#66ff66] to-[#00ff00] text-transparent bg-clip-text border-b border-[#66ff66] shadow-[0_0_20px_#66ff66] opacity-70"
+        class="text-center uppercase text-4xl md:text-6xl tracking-[.2em] font-black py-4 bg-gradient-to-b from-[#66ff66] to-[#00ff00] text-transparent bg-clip-text border-b border-[#66ff66] shadow-[0_0_20px_#66ff66] opacity-70"
       >
         hrací bedna
       </h1>
@@ -26,45 +26,51 @@
     <main class="flex flex-col align-center justify-center flex-grow">
       <!-- barevné boxy -->
       <section id="gameBox" class="visible flex flex-col relative">
-        <section id="Boxes" class="flex justify-center gap-12 my-10">
+        <section id="Boxes" class="flex justify-center gap-10 md:gap-12 my-8 md:my-10">
           <div
             id="firstColor"
             name="first"
-            class="size-28 border-2 border-[#66ff66] rounded-md bg-slate-800 shadow-[0_0_20px_#66ff66] transition-transform duration-300 ease-in-out"
+            class="size-24 md:size-28 border-2 border-[#66ff66] rounded-md bg-slate-800 shadow-[0_0_20px_#66ff66] transition-transform duration-300 ease-in-out"
           ></div>
           <div
             id="secondColor"
             name="second"
-            class="size-28 border-2 border-[#66ff66] rounded-md bg-slate-800 shadow-[0_0_20px_#66ff66] transition-transform duration-500 ease-in-out"
+            class="size-24 md:size-28 border-2 border-[#66ff66] rounded-md bg-slate-800 shadow-[0_0_20px_#66ff66] transition-transform duration-500 ease-in-out"
           ></div>
           <div
             id="thirdColor"
             name="third"
-            class="size-28 border-2 border-[#66ff66] rounded-md bg-slate-800 shadow-[0_0_20px_#66ff66] transition-transform duration-700 ease-in-out"
+            class="size-24 md:size-28 border-2 border-[#66ff66] rounded-md bg-slate-800 shadow-[0_0_20px_#66ff66] transition-transform duration-700 ease-in-out"
           ></div>
         </section>
         <!-- zobrazení - body a kliknuti -->
         <section class="flex justify-evenly mb-10">
           <p
             id="score"
-            class="flex flex-col uppercase text-2xl font-semibold tracking-widest text-center"
+            class="flex flex-col uppercase text-xl md:text-2xl font-semibold tracking-widest text-center"
           >
-            body<span id="scoreNumber" class="text-4xl font-bold">0</span>
+            body<span id="scoreNumber" class="text-3xl md:text-4xl font-bold">0</span>
           </p>
           <p
             id="clicks"
-            class="flex flex-col uppercase text-2xl font-semibold tracking-widest text-center"
+            class="flex flex-col uppercase text-xl md:text-2xl font-semibold tracking-widest text-center"
           >
-            kliknuto<span id="countClickNumber" class="text-4xl font-bold"
+            kliknuto<span id="countClickNumber" class="text-3xl md:text-4xl font-bold"
               >0</span
             >
           </p>
         </section>
         <!-- tlačítko klikni -->
         <section class="flex justify-center">
+          <!-- text - ošetření pro dvojklik -->
+          <div
+            id="ReportBody"
+            class="h-16 pt-4 uppercase text-xl md:text-2xl font-semibold tracking-widest"
+          ></div>
+          <!-- tlačítko -->
           <button
             id="spinBtn"
-            class="uppercase text-4xl border-2 border-[#66ff66] tracking-widest active:scale-[.95] shadow-[0_0_10px_#66ff66] hover:shadow-[0_0_30px_#66ff66] rounded-full px-5 py-1 ease-in-out"
+            class="h-16 uppercase text-3xl md:text-4xl border-2 border-[#66ff66] tracking-widest active:scale-[.95] shadow-[0_0_10px_#66ff66] hover:shadow-[0_0_30px_#66ff66] rounded-full px-5 py-1 ease-in-out"
           >
             <span id="leftArrToRight" class="tracking-tighter mr-5">&rArr;</span
             >klikni<span id="rightArrToLeft" class="tracking-tighter ml-3"
@@ -80,10 +86,10 @@
         <!-- tlačítko reset -->
         <section
           id="resetBtn"
-          class="invisible flex flex-col items-center gap-12 absolute top-20 left-1/2 transform -translate-x-1/2"
+          class="invisible flex flex-col items-center gap-12 absolute top-10 md:top-16 left-1/2 transform -translate-x-1/2"
         >
           <button
-            class="uppercase text-2xl border-2 border-[#66ff66] tracking-widest active:scale-[.95] shadow-[0_0_10px_#66ff66] hover:shadow-[0_0_30px_#66ff66] rounded-full px-5 py-1 ease-in-out duration-100"
+            class="uppercase text-xl md:text-3xl border-2 border-[#66ff66] tracking-widest active:scale-[.95] shadow-[0_0_10px_#66ff66] hover:shadow-[0_0_30px_#66ff66] rounded-full px-5 py-1 ease-in-out duration-100"
           >
             restart hry
           </button>
