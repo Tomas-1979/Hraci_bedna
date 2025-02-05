@@ -649,6 +649,10 @@ video {
   display: block;
 }
 
+.inline-block {
+  display: inline-block;
+}
+
 .flex {
   display: flex;
 }
@@ -923,6 +927,11 @@ video {
 .px-1 {
   padding-left: 0.25rem;
   padding-right: 0.25rem;
+}
+
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .pt-4 {
