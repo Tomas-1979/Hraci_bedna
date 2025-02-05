@@ -15,7 +15,7 @@ let btnArrLeftPos = document.querySelector("#leftArrToRight");
 let btnArrRightPos = document.querySelector("#rightArrToLeft");
 let resetBtn = document.querySelector("#resetBtn");
 
-// tlačítko - ošetčení dvojkliku
+// tlačítko - ošetření dvojkliku
 let clickValue = true;
 
 // pole barev
